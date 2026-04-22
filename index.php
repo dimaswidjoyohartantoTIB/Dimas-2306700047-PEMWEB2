@@ -13,7 +13,7 @@ class SivitasAkademik {
     }
 }
 
-// Class Dosen (turunan)
+// Class Dosen
 class Dosen extends SivitasAkademik {
     protected $nidn;
 
@@ -27,7 +27,7 @@ class Dosen extends SivitasAkademik {
     }
 }
 
-// Class Mahasiswa (turunan)
+// Class Mahasiswa
 class Mahasiswa extends SivitasAkademik {
     protected $nim;
 
@@ -42,14 +42,22 @@ class Mahasiswa extends SivitasAkademik {
 }
 
 // ======================
-// TEST / OUTPUT
+// INSTANSIASI OBJECT
 // ======================
 
-$dosen = new Dosen("Pak Budi", "123456");
-$mahasiswa = new Mahasiswa("Andi", "2306700047");
+$dosen = new Dosen("Dimas", "123456");
+$mahasiswa = new Mahasiswa("Dimas", "2306700047");
 
-echo "Dosen: " . $dosen->getNama() . " - NIDN: " . $dosen->getNidn();
-echo "<br>";
-echo "Mahasiswa: " . $mahasiswa->getNama() . " - NIM: " . $mahasiswa->getNim();
+// ======================
+// OUTPUT (WAJIB echo)
+// ======================
+
+echo "Data Dosen:<br>";
+echo "Nama: " . $dosen->getNama() . "<br>";
+echo "NIDN: " . $dosen->getNidn() . "<br><br>";
+
+echo "Data Mahasiswa:<br>";
+echo "Nama: " . $mahasiswa->getNama() . "<br>";
+echo "NIM: " . $mahasiswa->getNim();
 
 ?>
